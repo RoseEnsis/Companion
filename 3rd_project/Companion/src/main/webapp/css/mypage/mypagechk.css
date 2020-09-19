@@ -1,0 +1,105 @@
+.navbar {
+    margin-bottom: 5px;
+}
+
+.mytop{
+	background-color: #0F4C81;
+	width:100%;
+	height:200px;
+	display:flex;
+	padding-right:10px;
+	
+}
+#icon{
+	display:flex;
+	margin: auto;
+	margin-left:20px;
+	border: 10px solid #0F4C81;
+	border-radius:30px;
+	background: white;
+	width:175px;
+	height:200px;
+	color: #0F4C81;
+	padding-left:15px;
+	padding-top:20px;
+}
+.info{
+	display:flex;
+	margin: auto;
+	margin-left:10px;
+	border: 10px solid white;
+	border-radius:10px;
+	background: white;
+	width:680px;
+	height:180px;
+	color: #0F4C81;
+	padding:10px;
+}
+.info ul{
+	padding-left:0px;
+}
+.info ul li{
+	display:flex;	
+}
+.info ul li h3{
+	margin-right:15px;
+}
+.info ul li span{
+	font-size:20px;
+}
+#myinfo {
+	width:520px;
+}
+.info-box{
+	margin: auto;
+	background:#0F4C81;
+	width:220px;
+	height:180px;
+	color: #fff;
+	padding-top:60px;
+	padding-right:10px;
+	padding-left:10px;
+	text-align:center;
+}
+.editbox{
+	float:right;
+	padding-left:35px;
+}
+.emptyT{
+	margin-top:20px;
+	height:350px;
+}
+/* TABLE_LAYOUT STYLE */
+.table_layout{ margin:0px; table-layout:fixed; }
+.table_layout .col1 { width: 180px; } /* 이미지 */ 
+.table_layout .col2 { width: auto } /* 상품이름 */
+.table_layout .col3 { width: 150px; } /* 수매수량 */
+.table_layout .col4 { width: 200px; } /* 구매날짜 */
+
+.table{
+	text-align:center;
+	font-size:20px;
+	margin:0;
+}
+.table thead{
+	background: rgba(181, 209, 250, 0.5);
+}
+.table th{
+	padding:5px;
+}
+.table tbody tr{
+	height:80px;
+}
+.table tbody tr:nth-child(3){
+	height:55px;
+}
+.table tbody tr td span{
+	margin-top:10px;
+}
+.table .imgbox{
+	padding:4px;
+}
+.table tbody tr td img{
+	width:70px;
+	height:70px;
+}

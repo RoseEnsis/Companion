@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+  <mapper namespace="mypage">
+  	<update id="pwChange" parameterType="map">
+  		update member set member_pw=#{pw_change} where member_id=#{id_chk}
+  	</update>
+  	<update id="telChange" parameterType="map">
+  		update member set member_tel=#{tel_change} where member_id=#{id_chk}
+  	</update>
+  	<update id="phoneChange" parameterType="map">
+  		update member set member_phone=#{phone_change} where member_id=#{id_chk}
+  	</update>
+  	<update id="emailChange" parameterType="map">
+  		update member set member_email=#{email_change} where member_id=#{id_chk}
+  	</update>
+  	<update id="addrChange" parameterType="map">
+  		update member set member_addr1=#{addr1_change},member_addr2=#{addr2_change},member_addr3=#{addr3_change} where member_id=#{id_chk}
+  	</update>
+  	<select id="questionList" parameterType="String" resultType="mypageQuestionBean">
+  		select * from question where member_id=#{member_id} order by question_date desc
+  	</select>
+  	<select id="productThumb" parameterType="String" resultType="String">
+  		select product_thumb from product where product_id=#{product_id}
+  	</select>
+  	<select id="productName" parameterType="String" resultType="String">
+  		select product_name from product where product_id=#{product_id}
+  	</select>
+  	<select id="productPrice" parameterType="String" resultType="String">
+  		select product_price from product where product_id=#{product_id}
+  	</select>
+  	<select id="reserveList" parameterType="String" resultType="mypageReserveBean">
+  		select * from reserve where member_id=#{member_id} order by reserve_date desc
+  	</select>
+  	<select id="serviceName" parameterType="String" resultType="String">
+  		select service_name from service where service_id=#{service_id}
+  	</select>
+  	<select id="reserveStateName" parameterType="String" resultType="String">
+  		select reserve_state_name from reserve_state where reserve_state_id=#{reserve_state_id}
+  	</select>
+  	<select id="cartList" parameterType="String" resultType="mypageCartBean">
+  		select * from cart where member_id=#{member_id} order by cart_id
+  	</select>
+  	<delete id="selectDeleteCart" parameterType="hashmap">
+  		delete from cart where cart_id=#{cart_id} and member_id=#{member_id}
+  	</delete>
+  	<select id="productOption1" parameterType="String" resultType="String">
+  		select product_option1 from product where product_id=#{product_id}
+  	</select>
+  	<select id="productOption2" parameterType="String" resultType="String">
+  		select product_option2 from product where product_id=#{product_id}
+  	</select>
+  	<select id="productOption3" parameterType="String" resultType="String">
+  		select product_option3 from product where product_id=#{product_id}
+  	</select>
+  	<select id="productOption4" parameterType="String" resultType="String">
+  		select product_option4 from product where product_id=#{product_id}
+  	</select>
+  	<select id="productOption5" parameterType="String" resultType="String">
+  		select product_option5 from product where product_id=#{product_id}
+  	</select>
+  	<update id="changeOptionCart" parameterType="hashmap">
+  		update cart set cart_option=#{change_option} where member_id=#{member_id} and cart_id=#{cart_id}
+  	</update>
+  	<update id="changeQuantityCart" parameterType="hashmap">
+  		update cart set cart_quantity=#{change_quantity} where member_id=#{member_id} and cart_id=#{cart_id}
+  	</update>
+  	<insert id="insertOrder" parameterType="myCartOrderBean">
+  		insert into `order` values (default,#{member_id},#{order_date},#{order_amount},#{order_name},null,#{order_phone},#{order_addr1},#{order_addr2},#{order_addr3},#{order_msg},#{order_state_id})
+  	</insert>
+  	<insert id="insertOrder_detail" parameterType="myCartOrderBean">
+  		insert into order_detail values (default,#{order_id},#{product_id},#{order_detail_price},#{order_detail_quantity},#{order_detail_option})
+  	</insert>
+  	<insert id="insertDelivery" parameterType="myCartOrderBean">
+  		insert into delivery values (default,#{order_id},#{member_id},#{delivery_company},#{delivery_number},#{delivery_state_id})
+  	</insert>
+  	<insert id="insertPayment" parameterType="myCartOrderBean">
+  		insert into payment values (default,#{order_id},#{member_id},#{payment_date},#{payment_amount},#{payment_state_id})
+  	</insert>
+  	<delete id="deleteCart" parameterType="hashmap">
+  		delete from cart where cart_id=#{cart_id} and member_id=#{member_id} and product_id=#{product_id}
+  	</delete>
+  	<select id="countDeliveryNumber" parameterType="String" resultType="int">
+  		select count(*) from delivery where delivery_number=#{delivery_number}
+  	</select>
+  	<select id="findOrder_id" parameterType="hashmap" resultType="String">
+  		select order_id from `order` where member_id=#{member_id} and order_date=#{order_date} and order_amount=#{order_amount} and order_name=#{order_name}
+  	</select>
+  	<delete id="deleteOneQuestion" parameterType="hashmap">
+  		delete from question where member_id=#{member_id} and question_id=#{question_id}
+  	</delete>
+  	<select id="purchaseList" parameterType="String" resultType="myPurchaseListBean">
+  		select * from `order` where member_id=#{member_id} order by order_date desc
+  	</select>
+  	<select id="orderStateName" parameterType="String" resultType="String">
+  		select order_state_member from order_state where order_state_id=#{order_state_id}
+  	</select>
+  	<select id="purchaseDetailList" parameterType="String" resultType="myPurchaseDetailBean">
+  		select * from order_detail where order_id=#{order_id}
+  	</select>
+  	<select id="myPurchaseDetail" parameterType="hashmap" resultType="myPurchaseListBean">
+  		select * from `order` where order_id=#{order_id} and member_id=#{member_id}
+  	</select>
+  	<insert id="askProuctInsert" parameterType="mypageQuestionBean">
+  		insert into question values (default,#{question_type_id},#{order_id},#{product_id},#{member_id},now(),null,#{question_title},#{question_content},#{question_image},null,default,default)
+  	</insert>
+  	<insert id="reviewProductInsert" parameterType="myReviewProduct">
+  		insert into article values ('3',default,#{member_id},#{article_title},#{article_content},now(),'0',#{article_image},#{article_thumb},#{product_id})
+  	</insert>
+  	<update id="confirmPurchase" parameterType="hashmap">
+  		update `order` set order_state_id='7' where member_id=#{member_id} and order_id=#{order_id}
+  	</update>
+  </mapper>

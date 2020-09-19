@@ -1,0 +1,16 @@
+.table thead{}
+
+.table thead tr th{
+	text-align:center;
+}
+.table tbody{}
+.table tbody tr{
+	height:40px;
+	max-height:40px;
+}
+.table tbody tr td{
+	padding:5px;
+	text-align:center;
+	overflow:hidden;
+}
+

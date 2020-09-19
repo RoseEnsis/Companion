@@ -1,0 +1,56 @@
+label{
+	margin-bottom:0;
+}
+input{
+	padding-left:10px;
+	width:200px;
+}
+
+.btn__group{
+	width:240px;
+	margin: 0 auto;
+}
+.btn-groupR{
+	margin-top:15px;
+	margin-right:150px;
+	float:right;
+}
+.reserv_d{
+	width: 800px;
+	margin: 0 auto;
+}
+.reserv_d tbody tr{
+	height:45px;
+	border-bottom: 1px solid #a1a0a0;
+}
+.reserv_d .reserv_msg{
+	height:200px;
+}
+table tbody tr th{
+	text-align:center;
+	width:120px;
+}
+table tbody tr td{
+	width:200px;
+	padding-left:10px;
+}
+
+.inputAreaName{
+	width:355px;
+}
+.inputAreaName input{
+	width:100%;
+}
+.state-box{
+	display:flex;
+	margin-top:5px;
+}
+.state-box input{
+	width:20px;
+	margin-top:6px;
+	
+}
+.state-box label{
+	margin-right:30px;
+}
+

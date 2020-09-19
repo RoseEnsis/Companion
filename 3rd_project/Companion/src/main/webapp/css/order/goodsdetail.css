@@ -1,0 +1,309 @@
+/*-------------------CONTENT STYLE--------------------*/
+
+
+.textcontent{
+    margin-top: 10px;
+}
+.total-item{
+  text-align: right;
+}
+/* ---------------------------------------------------
+    GOODSDETAIL STYLE
+----------------------------------------------------- */
+.goodsImg{
+  width: 380px;
+  height: 440px;
+  border: solid;
+  padding: 10px;
+}
+.goodsImg img{
+  width:100%;
+  height:100%;
+  margin:auto;
+}
+
+#descrip{
+ 
+  padding: 15px;
+  height: 500px;
+}
+.goods-text{
+  height: 180px;
+}
+.goods-text div{
+	margin-bottom:10px;
+	font-size:18px;
+}
+.goods-text .title{
+	text-align: right;
+	letter-spacing:6px;
+	padding-right:50px;
+	line-height:1.5;
+
+}
+.goods-text>h5{
+  text-align: center;
+}
+
+.detailbtnR{
+  float: right;
+  margin-left: 20px;
+  
+}
+.nav-tabs{
+  margin-top: 20px;
+}
+.breadcrumb {
+  display: block;
+  overflow: hidden;
+  margin-right: 0px;
+}
+
+.breadcrumb-item {
+  float: left;
+}
+
+.pagination{
+    padding-bottom:0;
+}
+/* #product-info{
+	padding: auto 0;
+} */
+.inputAreaC img{
+	width:100%;
+	
+}
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+
+/* Rounded tabs */
+
+@media (min-width: 576px) {
+  .rounded-nav {
+    border-radius: 50rem !important;
+  }
+}
+
+@media (min-width: 576px) {
+  .rounded-nav .nav-link {
+    border-radius: 50rem !important;
+  }
+}
+
+/* With arrow tabs */
+
+.with-arrow .nav-link.active {
+  position: relative;
+}
+
+.with-arrow .nav-link.active::after {
+  content: '';
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #0F4C81;
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+}
+
+/* lined tabs */
+
+.lined .nav-link {
+  border: none;
+  border-bottom: 3px solid transparent;
+}
+
+.lined .nav-link:hover {
+  border: none;
+  border-bottom: 3px solid transparent;
+}
+
+.lined .nav-link.active {
+  background: none;
+  color: #0F4C81;
+  border-color: #0F4C81;
+}
+.btn--group{
+	width:100%;
+	float:right;
+	margin-top:20px;
+	margin-left: 80px;
+}
+#question_label{
+	width:76px;
+	text-align: center;
+}
+#question_title{
+	width:420px;
+}
+#question_content{
+	margin-top:10px;
+	width:420px;
+	height:100px;
+}
+#questiont{
+	float:right;
+}
+/*******************************************************************/
+.replyList h4{
+	margin-top:20px;
+	
+}
+.table--replyList{
+	text-align: center;
+	width:968px;
+	
+}
+.table--replyList tr{
+	border-bottom: 1px solid #b3b7bb;
+	
+}
+.table--replyList th{
+	line-height: 2;
+	font-size:20px;
+	letter-spacing:6px;
+}
+.table--replyList td{
+	line-height: 2.5;
+	font-size:18px;
+}
+.othersBlock{
+color: rgba(0,0,0,0.2);
+}
+
+/* TABLE_LAYOUT STYLE */
+.table_layout { margin:0px; table-layout:fixed; }
+.table_layout .col1 { width: 180px; }
+.table_layout .col2 { width: auto } 
+.table_layout .col3 { width: 200px; }
+.table_layout .col4 { width: 200px; }
+
+/*******************************************************************/
+/*******************************************************************/
+.reviewListH3{
+	width:150px;
+	text-align:center;
+	line-height:1.5;
+	border-bottom: 1px solid #b3b7bb;
+	font-size:22px;
+}
+.table--reviewList{
+	text-align: center;
+	width:968px;
+	
+}
+.table--reviewList tr{
+	border-bottom: 1px solid #b3b7bb;
+}
+.table--reviewList th{
+	line-height: 2;
+	font-size:20px;
+	letter-spacing:6px;
+}
+.table--reviewList tbody tr{
+	height:80px;
+}
+.table--reviewList td{
+	line-height: 2.5;
+	font-size:18px;
+}
+.table--reviewList td img{
+	height:80px;
+	width:80px;
+	margin:0 auto;
+}
+/* TABLE_LAYOUT STYLE */
+.table_layout2 { margin:0px; table-layout:fixed; }
+.table_layout2 .col1 { width: 180px; }
+.table_layout2 .col2 { width: auto }
+.table_layout2 .col3 { width: 200px; } 
+.table_layout2 .col4 { width: 200px; }
+
+/*******************************************************************/
+
+.recomB{
+	width:100%;
+	height:275px;
+}
+.recomB thead{
+	font-size:22px;
+	text-align:center;
+}
+.recomB tbody tr{
+	border-top:2px solid gray;
+	border-bottom:2px solid gray;
+	width:200px;
+}
+.recomB tbody tr td img{
+	padding-top:10px;
+	width:180px;
+	height:180px;
+	margin:10px auto;
+	
+}
+.recomB tbody tr td a div{
+	font-weight:500;
+	text-align: center;
+	width:180px;
+	height:75px;
+	padding-left:15px;
+}
+/***************  questionDetail & reviewDetail css  ********************/
+.DetailT{
+	width:800px;
+	margin-left:80px;
+}
+.DetailT label{
+	margin-bottom:0;
+}
+.DetailT thead{
+	font-size:18px;
+	border-bottom: 1px solid #b3b7bb;
+}
+.DetailT tbody{
+	font-size:16px;
+}
+.DetailT tr{
+	line-height:2;
+	
+}
+.btn__group{
+	float:right;
+	margin-top:20px;
+	margin-right:120px;
+}
+.aColor{
+	color:#0F4C81;
+}
+/*************** reviewDetail Contents css  ********************/
+.reviewCon{
+	height:200px;
+	min-height:200px;
+}
+.reviewPhoto{
+	height:200px;
+	width:250px;
+}
+.reviewPhoto img{
+	padding:15px;
+	height:200px;
+	min-height:200px;
+	width:200px;
+	min-width:200px;
+	margin-left:25px;
+	border-radius:10px;
+}
+.reviewText{
+	margin-top:20px;
+	text-align:left;
+	font-size:18px;
+	width:530px;
+	padding-right:20px;
+}

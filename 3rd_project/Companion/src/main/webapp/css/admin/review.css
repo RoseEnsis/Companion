@@ -1,0 +1,55 @@
+
+.search-group{
+	float:right;
+	margin:5px;
+	height:38px;
+	
+}
+.search-group input{
+	height:38px;
+	width:200px;
+	border: 1px solid gray;
+	border-radius: 5px;
+}
+
+.search-group button{
+	height:38px;
+	width: 60px;
+	border: 1px solid gray;
+	border-radius: 5px;
+}
+#search_Btn:hover{
+	font-weight:800;
+}
+.table{
+	margin: auto;
+	text-align:center;
+}
+.table td{
+	padding:0;
+}
+.table td img{
+	height:80px;
+	width:80px;
+}
+.table thead tr th{
+	text-align:center;
+}
+.table tbody{}
+.table tbody tr{
+	height:80px;
+}
+.table tbody tr td{
+	height:80px;
+
+}
+.table tbody tr td div{
+	height:30px;
+	margin-top: 25px;
+}
+
+.table tbody tr td .div2{
+	height:30px;
+	margin-top: 14px;
+}
+

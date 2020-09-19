@@ -1,0 +1,70 @@
+/* TABLE_LAYOUT STYLE */
+.table_layout { margin:0px; table-layout:fixed; }
+.table_layout .col1 { width: 110px; } /* 카테고리 */ 
+.table_layout .col2 { width: 70px; } /* 이미지 */
+.table_layout .col3 { width: auto; } /* 이름 */
+.table_layout .col4 { width: 100px; } /* 가격 */
+.table_layout .col5 { width: 80px; } /* 수량 */
+.table_layout .col6 { width: 110px; } /* 등록날짜 */
+.table_layout .col7 { width: 120px; } /* 좋아요 */
+.table_layout .col8 { width: 120px; } /* 옵션1 */
+.table_layout .col9 { width: 120px; } /* 옵션2 */
+
+.insertbtn{
+	margin:5px;
+	width: 90px;
+}	
+
+.search-group{
+	float:right;
+	margin:5px;
+	height:38px;
+	
+}
+.search-group input{
+	height:38px;
+	width:200px;
+	border: 1px solid gray;
+	border-radius: 5px;
+}
+
+.search-group button{
+	height:38px;
+	width: 60px;
+	border: 1px solid gray;
+	border-radius: 5px;
+}
+#search_Btn:hover{
+	font-weight:800;
+}
+.table{
+	margin: auto;
+	text-align:center;
+}
+.table td{
+	padding:0;
+}
+.table td img{
+	height:80px;
+	width:80px;
+}
+.table thead tr th{
+	text-align:center;
+}
+.table tbody tr{
+	height:80px;
+}
+.table tbody tr td{
+	height:80px;
+
+}
+.table tbody tr td div{
+	height:30px;
+	margin-top: 15px;
+}
+
+.table tbody tr td .div2{
+	height:30px;
+	margin-top: 14px;
+}
+

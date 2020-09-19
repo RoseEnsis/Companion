@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="adminHome">
+
+	<!-- daily sum -->
+	<select id="selectToday" resultType="PaymentBean">
+		select sum(payment_amount) as daily_sum from `payment` where payment_date like CONCAT(#{today},'%')
+	</select>
+	<select id="selectToday_1" resultType="PaymentBean">
+		select sum(payment_amount) as daily_sum from `payment` where payment_date like CONCAT(#{today_1},'%')
+	</select>
+	<select id="selectToday_2" resultType="PaymentBean">
+		select sum(payment_amount) as daily_sum from `payment` where payment_date like CONCAT(#{today_2},'%')
+	</select>
+	<select id="selectToday_3" resultType="PaymentBean">
+		select sum(payment_amount) as daily_sum from `payment` where payment_date like CONCAT(#{today_3},'%')
+	</select>
+	<select id="selectToday_4" resultType="PaymentBean">
+		select sum(payment_amount) as daily_sum from `payment` where payment_date like CONCAT(#{today_4},'%')
+	</select>
+	<select id="selectToday_5" resultType="PaymentBean">
+		select sum(payment_amount) as daily_sum from `payment` where payment_date like CONCAT(#{today_5},'%')
+	</select>
+	<select id="selectToday_6" resultType="PaymentBean">
+		select sum(payment_amount) as daily_sum from `payment` where payment_date like CONCAT(#{today_6},'%')
+	</select>
+	
+	<!-- monthly sum -->
+	<select id="selectMonth" resultType="PaymentBean">
+		select sum(payment_amount) as monthly_sum from `payment` where payment_date like CONCAT(#{month},'%')
+	</select>
+	<select id="selectMonth_1" resultType="PaymentBean">
+		select sum(payment_amount) as monthly_sum from `payment` where payment_date like CONCAT(#{month_1},'%')
+	</select>
+	<select id="selectMonth_2" resultType="PaymentBean">
+		select sum(payment_amount) as monthly_sum from `payment` where payment_date like CONCAT(#{month_2},'%')
+	</select>
+	<select id="selectMonth_3" resultType="PaymentBean">
+		select sum(payment_amount) as monthly_sum from `payment` where payment_date like CONCAT(#{month_3},'%')
+	</select>
+	<select id="selectMonth_4" resultType="PaymentBean">
+		select sum(payment_amount) as monthly_sum from `payment` where payment_date like CONCAT(#{month_4},'%')
+	</select>
+	<select id="selectMonth_5" resultType="PaymentBean">
+		select sum(payment_amount) as monthly_sum from `payment` where payment_date like CONCAT(#{month_5},'%')
+	</select>
+	<select id="selectMonth_6" resultType="PaymentBean">
+		select sum(payment_amount) as monthly_sum from `payment` where payment_date like CONCAT(#{month_6},'%')
+	</select>
+	
+	<!-- Data Table -->
+	<select id="selectProduct" resultType="adminDataTableBean">
+		select product_id, product_name, product_price, product_stock, (select sum(order_detail_quantity) from `order_detail` o_d where o_d.product_id=p.product_id ) as total_cumulative_sales, (select sum(order_detail_quantity) from `order_detail` o_d, `order` o where o_d.product_id=p.product_id AND o_d.order_id=o.order_id AND o.order_date like CONCAT(#{month},'%')) as month_cumulative_sales from `product` p;
+	</select>
+</mapper>

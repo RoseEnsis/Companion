@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+  <configuration>
+  	<typeAliases>
+  		<!-- hotel -->
+  		<typeAlias alias="hotelBean" type="com.bit.companion.model.entity.hotel.HotelVo"/>
+  		
+		<!-- login -->  		
+  		<typeAlias alias="memberBean" type="com.bit.companion.model.entity.login.MemberVo"/>
+  		<typeAlias alias="loginBean" type="com.bit.companion.model.entity.login.LoginVo"/>
+  		
+  		<!-- mypage -->
+  		<typeAlias alias="mypageQuestionBean" type="com.bit.companion.model.entity.mypage.MypageQuestionVo"/>
+  		<typeAlias alias="mypageReserveBean" type="com.bit.companion.model.entity.mypage.MypageReserveVo"/>
+  		<typeAlias alias="mypageCartBean" type="com.bit.companion.model.entity.mypage.MypageCartVo"/>
+  		<typeAlias alias="myCartOrderBean" type="com.bit.companion.model.entity.mypage.MyCartOrderVo"/>
+  		<typeAlias alias="myPurchaseListBean" type="com.bit.companion.model.entity.mypage.MyPurchaseListVo"/>
+  		<typeAlias alias="myPurchaseDetailBean" type="com.bit.companion.model.entity.mypage.MyPurchaseDetailVo"/>
+  		<typeAlias alias="myReviewProduct" type="com.bit.companion.model.entity.mypage.MyReviewVo"/>
+  		
+  		<!-- admin -->
+  		<typeAlias alias="adminArticleBean" type="com.bit.companion.model.entity.admin.AdminArticleVo"/>
+  		<typeAlias alias="adminCategoryBean" type="com.bit.companion.model.entity.admin.AdminCategoryVo"/>
+  		<typeAlias alias="adminProductBean" type="com.bit.companion.model.entity.admin.AdminProductVo"/>
+  		<typeAlias alias="adminProductViewBean" type="com.bit.companion.model.entity.admin.AdminProductViewVo"/>
+  		<typeAlias alias="adminMemberViewBean" type="com.bit.companion.model.entity.admin.AdminMemberViewVo"/>
+  		<typeAlias alias="adminReservationBean" type="com.bit.companion.model.entity.admin.AdminReservationVo"/>
+  		<typeAlias alias="adminHotelServiceBean" type="com.bit.companion.model.entity.admin.AdminHotelServiceVo"/>
+  		<typeAlias alias="PaymentBean" type="com.bit.companion.model.entity.admin.AdminPaymentVo"/>
+  		<typeAlias alias="adminQuestionBean" type="com.bit.companion.model.entity.admin.AdminQuestionVo"/>
+  		<typeAlias alias="adminDataTableBean" type="com.bit.companion.model.entity.admin.AdminDataTableVo"/>
+  		<typeAlias alias="adminOrderBean" type="com.bit.companion.model.entity.admin.AdminOrderVo"/>
+  		<typeAlias alias="adminOrderDetailBean" type="com.bit.companion.model.entity.admin.AdminOrderDetailVo"/>
+  		
+		<!-- order -->
+   		<typeAlias alias="orderBean" type="com.bit.companion.model.entity.order.OrderVo"/>
+  		<typeAlias alias="productBean" type="com.bit.companion.model.entity.order.ProductVo"/>
+  		<typeAlias alias="likeBean" type="com.bit.companion.model.entity.order.LikeVo"/>
+  		<typeAlias alias="orderQuestionBean" type="com.bit.companion.model.entity.order.OrderQuestionVo"/>
+  		<typeAlias alias="orderReviewBean" type="com.bit.companion.model.entity.order.OrderReviewVo"/>
+  		<typeAlias alias="sessionBean" type="com.bit.companion.model.entity.order.SessionVo"/>
+  		
+  		<!-- notice -->
+  		<typeAlias alias="articleBean" type="com.bit.companion.model.entity.notice.ArticleVo"/>
+  		
+  	</typeAliases>
+  	<mappers>
+  		<!-- hotel -->
+  		<mapper resource="mybatis/hotel/hotelMapper.xml"/>
+  		
+  		<!-- login -->
+  		<mapper resource="mybatis/login/memberMapper.xml"/>
+  		<mapper resource="mybatis/login/loginMapper.xml"/>
+  		
+  		<!-- mypage -->
+  		<mapper resource="mybatis/mypage/mypageMapper.xml"/>
+  		
+  		<!-- admin -->
+  		<mapper resource="mybatis/admin/adminArticleMapper.xml"/>
+  		<mapper resource="mybatis/admin/adminProductMapper.xml"/>
+  		<mapper resource="mybatis/admin/adminMemberMapper.xml"/>
+  		<mapper resource="mybatis/admin/adminHomeMapper.xml"/>
+  		<mapper resource="mybatis/admin/adminReservationMapper.xml"/>
+  		<mapper resource="mybatis/admin/adminQuestionMapper.xml"/>
+  		<mapper resource="mybatis/admin/adminReviewMapper.xml"/>
+  		<mapper resource="mybatis/admin/adminOrderMapper.xml"/>
+  		
+  		<!-- order -->
+  		<mapper resource="mybatis/order/orderMapper.xml"/>
+  		<mapper resource="mybatis/order/productMapper.xml"/>
+  		<mapper resource="mybatis/order/likeMapper.xml"/>
+  		<mapper resource="mybatis/order/orderQuestion.xml"/>
+  		<mapper resource="mybatis/order/orderReviewMapper.xml"/>
+  		<mapper resource="mybatis/order/sessionMapper.xml"/>
+  		
+  		
+  		<!-- notice -->
+  		<mapper resource="mybatis/notice/noticeMapper.xml"/>
+  		<mapper resource="mybatis/notice/eventMapper.xml"/>
+  		<mapper resource="mybatis/notice/faqMapper.xml"/>
+  		
+  	</mappers>
+  </configuration>  
